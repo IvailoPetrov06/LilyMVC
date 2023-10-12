@@ -19,6 +19,7 @@ namespace LilyMVC.Controller
             view = new MainView();
         }
 
+
         public void Run()
         {
             double totalSavings = 0;
