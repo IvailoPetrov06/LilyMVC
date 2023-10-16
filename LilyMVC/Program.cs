@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LilyMVC.Controller;
+using System;
 
 namespace LilyMVC
 {
@@ -6,7 +7,8 @@ namespace LilyMVC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainController controller = new MainController();
+            controller.Run();
         }
     }
 }

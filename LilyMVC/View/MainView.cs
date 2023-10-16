@@ -6,8 +6,18 @@ using System.Threading.Tasks;
 
 namespace LilyMVC.View
 {
-    class MainView
+    public class MainView
     {
-
+        public void ShowResult(double totalSavings, double washingMachinePrice)
+        {
+            if (totalSavings >= washingMachinePrice)
+            {
+                Console.WriteLine($"Да! {totalSavings - washingMachinePrice:f2}");
+            }
+            else
+            {
+                Console.WriteLine($"Не! {washingMachinePrice - totalSavings:f2}");
+            }
+        }
     }
 }
