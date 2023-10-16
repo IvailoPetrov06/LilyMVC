@@ -36,5 +36,6 @@ namespace LilyMVC.Controller
             model.TotalSavings = totalSavings;
             MainView view = new MainView();
             view.ShowResult(model.TotalSavings, model.WashingMachinePrice);
+       }
     }
 }
