@@ -27,7 +27,6 @@ namespace LilyMVC.Controller
                 if (age % 2 == 0)
                 {
                     totalSavings += (age / 2) * 10.0 - 1.0;
-                    toyMoney += model.ToyPrice;
                 }
                 else
                 {
