@@ -10,21 +10,18 @@ namespace LilyMVC.Controller
 {
     public class MainController
     {
-        private Money model;
-        private MainView view;
-
-        public MainController()
-        {
-            model = new Money();
-            view = new MainView();
-        }
-
 
         public void Run()
         {
+            Money model = new Money();
+            Console.WriteLine($"Enter the age:");
+            model.Age = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Enter the pricr on washing:");
+            model.WashingMachinePrice = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Enter the price on toy:");
+            model.ToyPrice = int.Parse(Console.ReadLine());
             double totalSavings = 0;
-            double toyMoney = 0;
-
+            
             for (int age = 1; age <= model.Age; age++)
             {
                 if (age % 2 == 0)
@@ -37,9 +34,8 @@ namespace LilyMVC.Controller
                     toyMoney += model.ToyPrice;
                 }
             }
-
-            totalSavings += toyMoney;
             model.TotalSavings = totalSavings;
+            MainView view = new MainView();
             view.ShowResult(model.TotalSavings, model.WashingMachinePrice);
         }
     }
