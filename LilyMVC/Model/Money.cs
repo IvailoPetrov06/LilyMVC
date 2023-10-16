@@ -13,15 +13,6 @@ namespace LilyMVC.Model
         public int ToyPrice { get; set; }
         public double TotalSavings { get; set; }
         public double MoneyGift { get; set; }
-        public Money()
-        {
-
-        }
-        public Money(int age, double washingMachinePrice, int toyPrice)
-        {
-            Age = age;
-            WashingMachinePrice = washingMachinePrice;
-            ToyPrice = toyPrice;
         }
     }
 }
